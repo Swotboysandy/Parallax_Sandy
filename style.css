@@ -53,7 +53,7 @@ header {
     padding: 0.9rem 0;
     top: 0;
     left: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 header nav{
@@ -96,7 +96,7 @@ header ul a {
     height: 37px;
     display: flex;
     border-radius: 50%;
-    background-color: rgba(115, 115, 115, .7);
+    background-color: rgba(115, 115, 115, 0.259);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     justify-content: center;
@@ -138,14 +138,17 @@ main{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-
+    z-index: -5;
 }
 
 
-.avengers {
+main .avengers {
     pointer-events: none;
     transition: 0.45s cubic-bezier(.2,.49,.32,.99);
+    position: fixed;
+    z-index: -1;
 }
+
 
 .bg-img{
     position: absolute;
@@ -165,9 +168,9 @@ main{
 
 .spideyleft {
     position: absolute;
-    width: 32.29%;
+    width: 20.29%;
     top: 51.08%;
-    left: 13%;
+    left: 8%;
     z-index: 3;
 }
 
@@ -176,7 +179,7 @@ main{
     width: 11%;
     top: 57%;
     left: 11%;
-    z-index: 2;
+    z-index: -1;
 }
 
 .IMBottom {
@@ -189,6 +192,7 @@ main{
 
 #additional-content {
     position: sticky;
+    z-index: 2;
   }
   
   .BlackPanther {
@@ -243,10 +247,6 @@ main{
       transform: translateY(0);
     }
   }
-  
-
-
-
   
 .text{
     position: absolute;
@@ -378,3 +378,5 @@ header ul a{
         font-size: 2.6rem;
     }
 }
+
+
